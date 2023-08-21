@@ -1,0 +1,14 @@
+
+# User-specific stuff
+.idea/
+.vscode/
+
+# Python-specific ignores
+venv/
+*.pyc
+
+# Output
+build/
+render/
+*.png
+*.blend1

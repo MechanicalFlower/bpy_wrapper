@@ -1,0 +1,8 @@
+addon_folder: bpy_wrapper
+build_name: bpy_wrapper
+
+install_versions:
+  - '3.6'
+
+during_build:
+  -

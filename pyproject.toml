@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "bpy_wrapper"
+version = "0.1.0"
+description = "Blender API wrapper"
+license = "GPL-3.0"
+authors = ["Florian Vazelle <florian.vazelle@vivaldi.net>"]
+repository = "https://github.com/MechanicalFlower/bpy_wrapper"
+readme = ["README.md", "LICENSE.md"]
+
+[tool.poetry.dependencies]
+python = "==3.10.*"
+bpy = "^3.6.0"
+
+[tool.poetry.group.build.dependencies]
+bpy-addon-build = "^0.2.1"
+
+[tool.poetry.group.scripts.dependencies]
+ffmpeg-python = "^0.2.0"
+
+[tool.poetry.group.dev.dependencies]
+nox = "^2023.4.22"
+pre-commit = "^3.3.3"
+pytest = "^7.4.0"
+
+[tool.poetry.scripts]
+turntable = "examples.turntable:start"
+generate_gif = "scripts.generate_gif:main"
+
+[tool.ruff]
+line-length = 120
+
+[tool.mypy]
+strict = true
+
+[tool.codespell]
+skip = 'models/*'
+
+[tool.bandit]
+exclude_dirs = ['tests']
