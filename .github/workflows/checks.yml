@@ -1,0 +1,27 @@
+
+name: Checks
+
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        check: ["test", "lint"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install poetry
+        uses: abatilo/actions-poetry@v2
+      - name: Run nox ${{ matrix.check }}
+        run: |
+          poetry install
+          poetry run nox -rs ${{ matrix.check }}
