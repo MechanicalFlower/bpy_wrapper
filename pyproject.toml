@@ -9,7 +9,7 @@ readme = ["README.md", "LICENSE.md"]
 
 [tool.poetry.dependencies]
 python = "==3.10.*"
-bpy = "^3.6.0"
+bpy = "^4.0.0"
 
 [tool.poetry.group.build.dependencies]
 bpy-addon-build = "^0.2.1"
