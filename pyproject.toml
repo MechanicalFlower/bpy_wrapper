@@ -19,7 +19,7 @@ ffmpeg-python = "^0.2.0"
 
 [tool.poetry.group.dev.dependencies]
 nox = "^2024.3.2"
-pre-commit = "^3.6.2"
+pre-commit = "^3.7.0"
 pytest = "^8.1.1"
 
 [tool.poetry.scripts]
