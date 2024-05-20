@@ -54,14 +54,13 @@ zstandard = "*"
 
 [[package]]
 name = "bpy-addon-build"
-version = "0.3.0"
+version = "0.4.0"
 description = "A build system to make building and testing Blender addons 10 times easier"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "bpy_addon_build-0.3.0-1-py3-none-any.whl", hash = "sha256:c97bcef8fe0f46fbd4448728ed39c8482864a69d71f46b0f47f596a6e6d8f1c2"},
-    {file = "bpy_addon_build-0.3.0-py3-none-any.whl", hash = "sha256:37e49f74c95955ced676f44f80510200a8e0f96664f71284766664f66a29b9cb"},
-    {file = "bpy_addon_build-0.3.0.tar.gz", hash = "sha256:d9fb05588611c57fd4c0ca2e9b78975514f437c004401cc0861bb746ad9ebb56"},
+    {file = "bpy_addon_build-0.4.0-py3-none-any.whl", hash = "sha256:8de89cbdec1f763df83be7306d2e2bfe659087c4122bdbba9f4e095571c572b1"},
+    {file = "bpy_addon_build-0.4.0.tar.gz", hash = "sha256:8ac7d4d82ef759d1b461e0063e2af40215ff410fca421655f8cdc4b914ecfd77"},
 ]
 
 [package.dependencies]
@@ -69,6 +68,7 @@ attrs = ">=23.1.0,<24.0.0"
 cattrs = ">=23.2.3,<24.0.0"
 pyyaml = ">=6.0.1,<7.0.0"
 rich = ">=13.7.0,<14.0.0"
+typeguard = ">=4.1.5,<5.0.0"
 
 [[package]]
 name = "cattrs"
@@ -813,14 +813,32 @@ files = [
 ]
 
 [[package]]
+name = "typeguard"
+version = "4.2.1"
+description = "Run-time type checker for Python"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "typeguard-4.2.1-py3-none-any.whl", hash = "sha256:7da3bd46e61f03e0852f8d251dcbdc2a336aa495d7daff01e092b55327796eb8"},
+    {file = "typeguard-4.2.1.tar.gz", hash = "sha256:c556a1b95948230510070ca53fa0341fb0964611bd05d598d87fb52115d65fee"},
+]
+
+[package.dependencies]
+typing-extensions = {version = ">=4.10.0", markers = "python_version < \"3.13\""}
+
+[package.extras]
+doc = ["Sphinx (>=7)", "packaging", "sphinx-autodoc-typehints (>=1.2.0)"]
+test = ["coverage[toml] (>=7)", "mypy (>=1.2.0)", "pytest (>=7)"]
+
+[[package]]
 name = "typing-extensions"
-version = "4.9.0"
+version = "4.11.0"
 description = "Backported and Experimental Type Hints for Python 3.8+"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "typing_extensions-4.9.0-py3-none-any.whl", hash = "sha256:af72aea155e91adfc61c3ae9e0e342dbc0cba726d6cba4b6c72c1f34e47291cd"},
-    {file = "typing_extensions-4.9.0.tar.gz", hash = "sha256:23478f88c37f27d76ac8aee6c905017a143b0b1b886c3c9f66bc2fd94f9f5783"},
+    {file = "typing_extensions-4.11.0-py3-none-any.whl", hash = "sha256:c1f94d72897edaf4ce775bb7558d5b79d8126906a14ea5ed1635921406c0387a"},
+    {file = "typing_extensions-4.11.0.tar.gz", hash = "sha256:83f085bd5ca59c80295fc2a82ab5dac679cbe02b9f33f7d83af68e241bea51b0"},
 ]
 
 [[package]]
@@ -921,4 +939,4 @@ cffi = ["cffi (>=1.11)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "==3.10.*"
-content-hash = "8a8c258eedeb43b0a42cc0edaaeff87bb3f8db9e77fd090b4b973e7b95f03290"
+content-hash = "f233e9d94dca279eccb734fb87aacdeeafb169fc3ec89bf8b6b56041c4dbd110"
