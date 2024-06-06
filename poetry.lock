@@ -54,46 +54,21 @@ zstandard = "*"
 
 [[package]]
 name = "bpy-addon-build"
-version = "0.3.0"
+version = "0.4.1"
 description = "A build system to make building and testing Blender addons 10 times easier"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "bpy_addon_build-0.3.0-1-py3-none-any.whl", hash = "sha256:c97bcef8fe0f46fbd4448728ed39c8482864a69d71f46b0f47f596a6e6d8f1c2"},
-    {file = "bpy_addon_build-0.3.0-py3-none-any.whl", hash = "sha256:37e49f74c95955ced676f44f80510200a8e0f96664f71284766664f66a29b9cb"},
-    {file = "bpy_addon_build-0.3.0.tar.gz", hash = "sha256:d9fb05588611c57fd4c0ca2e9b78975514f437c004401cc0861bb746ad9ebb56"},
+    {file = "bpy_addon_build-0.4.1-py3-none-any.whl", hash = "sha256:114c98dccddaf00c80c6e1c88dc3723a8675a60bb06a09221daf684e9cdf10dc"},
+    {file = "bpy_addon_build-0.4.1.tar.gz", hash = "sha256:f5b7a75ccfd64907fcfe206f2d45204b9b760468985f7c3989edd46bfb7d29ec"},
 ]
 
 [package.dependencies]
 attrs = ">=23.1.0,<24.0.0"
-cattrs = ">=23.2.3,<24.0.0"
 pyyaml = ">=6.0.1,<7.0.0"
 rich = ">=13.7.0,<14.0.0"
-
-[[package]]
-name = "cattrs"
-version = "23.2.3"
-description = "Composable complex class support for attrs and dataclasses."
-optional = false
-python-versions = ">=3.8"
-files = [
-    {file = "cattrs-23.2.3-py3-none-any.whl", hash = "sha256:0341994d94971052e9ee70662542699a3162ea1e0c62f7ce1b4a57f563685108"},
-    {file = "cattrs-23.2.3.tar.gz", hash = "sha256:a934090d95abaa9e911dac357e3a8699e0b4b14f8529bcc7d2b1ad9d51672b9f"},
-]
-
-[package.dependencies]
-attrs = ">=23.1.0"
-exceptiongroup = {version = ">=1.1.1", markers = "python_version < \"3.11\""}
-typing-extensions = {version = ">=4.1.0,<4.6.3 || >4.6.3", markers = "python_version < \"3.11\""}
-
-[package.extras]
-bson = ["pymongo (>=4.4.0)"]
-cbor2 = ["cbor2 (>=5.4.6)"]
-msgpack = ["msgpack (>=1.0.5)"]
-orjson = ["orjson (>=3.9.2)"]
-pyyaml = ["pyyaml (>=6.0)"]
-tomlkit = ["tomlkit (>=0.11.8)"]
-ujson = ["ujson (>=5.7.0)"]
+typeguard = ">=4.1.5,<5.0.0"
+typing-extensions = ">=4.11.0,<5.0.0"
 
 [[package]]
 name = "certifi"
@@ -813,14 +788,32 @@ files = [
 ]
 
 [[package]]
+name = "typeguard"
+version = "4.3.0"
+description = "Run-time type checker for Python"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "typeguard-4.3.0-py3-none-any.whl", hash = "sha256:4d24c5b39a117f8a895b9da7a9b3114f04eb63bade45a4492de49b175b6f7dfa"},
+    {file = "typeguard-4.3.0.tar.gz", hash = "sha256:92ee6a0aec9135181eae6067ebd617fd9de8d75d714fb548728a4933b1dea651"},
+]
+
+[package.dependencies]
+typing-extensions = ">=4.10.0"
+
+[package.extras]
+doc = ["Sphinx (>=7)", "packaging", "sphinx-autodoc-typehints (>=1.2.0)", "sphinx-rtd-theme (>=1.3.0)"]
+test = ["coverage[toml] (>=7)", "mypy (>=1.2.0)", "pytest (>=7)"]
+
+[[package]]
 name = "typing-extensions"
-version = "4.9.0"
+version = "4.12.1"
 description = "Backported and Experimental Type Hints for Python 3.8+"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "typing_extensions-4.9.0-py3-none-any.whl", hash = "sha256:af72aea155e91adfc61c3ae9e0e342dbc0cba726d6cba4b6c72c1f34e47291cd"},
-    {file = "typing_extensions-4.9.0.tar.gz", hash = "sha256:23478f88c37f27d76ac8aee6c905017a143b0b1b886c3c9f66bc2fd94f9f5783"},
+    {file = "typing_extensions-4.12.1-py3-none-any.whl", hash = "sha256:6024b58b69089e5a89c347397254e35f1bf02a907728ec7fee9bf0fe837d203a"},
+    {file = "typing_extensions-4.12.1.tar.gz", hash = "sha256:915f5e35ff76f56588223f15fdd5938f9a1cf9195c0de25130c627e4d597f6d1"},
 ]
 
 [[package]]
@@ -921,4 +914,4 @@ cffi = ["cffi (>=1.11)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "==3.10.*"
-content-hash = "895e7c0eb1eeae84e91022931f4e782f2fc5686798c63ae6d05f5e2fad13c833"
+content-hash = "cf8e38cba644cb76a1b8b1589efd9bfb973771d5a3108a8170989e95bf85e7ee"
