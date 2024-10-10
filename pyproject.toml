@@ -18,7 +18,7 @@ bpy-addon-build = "^0.3.0"
 ffmpeg-python = "^0.2.0"
 
 [tool.poetry.group.dev.dependencies]
-nox = "^2024.4.15"
+nox = "^2024.10.9"
 pre-commit = "^4.0.1"
 pytest = "^8.3.2"
 
